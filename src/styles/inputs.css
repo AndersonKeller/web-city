@@ -1,0 +1,11 @@
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  transition: all 0.3s ease;
+  accent-color: var(--color-info);
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 4px black);
+}
+input[type="radio"]:checked {
+  transform: scale(1.15);
+}
