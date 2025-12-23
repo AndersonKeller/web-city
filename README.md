@@ -3,8 +3,11 @@
 Inspired by SimCity and Micropolis, but using a more modern interface.
 A web game using HTML canvas, inspired by and adapted from https://github.com/graememcc/micropolisJS using Vue 3, TypeScript ans vite.
 
+Live run:
 
-To run:
+https://web-city-topaz.vercel.app/
+
+To local run:
 
 Clone the repository
 ```

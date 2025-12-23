@@ -10,7 +10,7 @@ import { modalStore } from "../../../stores/modal.store";
       <div class="content">
         <p>
           - Wow! You've been playing this for half an hour?!? That's when I can ask you to star the repository on github.
-          <a href="https://www.refuweegee.co.uk/your-donations" target="_blank">WebCity</a>
+          <a href="https://github.com/AndersonKeller/web-city" target="_blank">WebCity</a>
         </p>
       </div>
       <button class="btn" @click="modalStore().closeAll()">Ok</button>

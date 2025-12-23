@@ -12,7 +12,7 @@ const props = defineProps({
       <nav>
         <!-- <a href="#" target="_blank">About</a> -->
 
-        <a href="https://github.com/graememcc/micropolisJS" target="_blank">GitHub</a>
+        <a href="https://github.com/AndersonKeller/web-city" target="_blank">GitHub</a>
       </nav>
     </div>
     <InfoBar v-if="start" />
