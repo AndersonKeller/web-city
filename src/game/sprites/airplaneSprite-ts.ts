@@ -48,7 +48,7 @@ export const airplaneSpriteController = {
     this.y = y;
     return { ...this.base, ...this };
   },
-  move(spriteCycle: number, disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
+  move(spriteCycle: number, disasterManager: iDisasterManager, _blockMaps: BlockMapSimulation) {
     let frame = this.frame;
 
     if (spriteCycle % 5 === 0) {
@@ -110,5 +110,5 @@ export const airplaneSpriteController = {
       y: this.base.worldY,
     });
   },
-  addEventListener(event: string, subject: Function) {},
+  addEventListener(_event: string, _subject: Function) {},
 };

@@ -123,7 +123,7 @@ export const valvesController = {
 
     this._emitEvent(VALVES_UPDATED);
   },
-  _emitEvent(event: string, subject?: Object) {
+  _emitEvent(_event: string, _subject?: Object) {
     //todo Event emiter
     return;
   },

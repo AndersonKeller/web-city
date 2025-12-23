@@ -37,7 +37,7 @@ export const tornadoSpriteController = {
     this.worldY = y >> 4;
     return { ...this.base, ...this };
   },
-  move(spriteCycle: number, disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
+  move(_spriteCycle: number, _disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
     let frame = this.frame;
     // If middle frame, move right or left
     // depending on the flag value
@@ -94,5 +94,5 @@ export const tornadoSpriteController = {
     spriteUtilsController.destroyMapTile(this.spriteManager, this.map, blockMaps, this.x, this.y);
     this.base._emitEvent(SPRITE_MOVED, { x: this.worldX, y: this.worldY });
   },
-  addEventListener(message: string, subject: Function) {},
+  addEventListener(_message: string, _subject: Function) {},
 };

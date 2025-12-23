@@ -1,5 +1,5 @@
 import { modalStore } from "../stores/modal.store.ts";
-import { budgetController } from "./simulation/budget-ts.ts";
+
 import { EventEmitter } from "./utils/eventEmitter-ts.ts";
 import { gameCanvasController } from "./gameCanvas-ts";
 import type { GameMap } from "./map/gameMap-ts.ts";
@@ -32,7 +32,7 @@ export const inputStatusController = {
   _dragging: false,
   _lastDragX: -1,
   _lastDragY: -1,
-  addEventListener: (event: string, subject?: Function) => {},
+  addEventListener: (_event: string, _subject?: Function) => {},
   toolName: null,
   currentTool: null,
   toolWidth: 0,
@@ -121,7 +121,7 @@ export const inputStatusController = {
         this.escape = false;
     }
   },
-  mouseEnterHandler(e) {
+  mouseEnterHandler() {
     if (this.currentTool === null) return;
 
     this.canvasElement.addEventListener("mousemove", this.mouseMoveHandler.bind(this));
@@ -188,7 +188,7 @@ export const inputStatusController = {
     this._emitEvent(Messages.TOOL_CLICKED, { x: this.mouseX, y: this.mouseY });
     e.preventDefault();
   },
-  mouseLeaveHandler(e) {
+  mouseLeaveHandler() {
     this.canvasElement.removeEventListener("mousedown", this.mouseDownHandler);
     this.canvasElement.removeEventListener("mousemove", this.mouseMoveHandler);
     this.canvasElement.removeEventListener("mouseup", this.mouseUpHandler);
@@ -284,7 +284,7 @@ export const inputStatusController = {
       element.classList.remove("selected");
     }
   },
-  _emitEvent(event: string, subject?: Object) {
+  _emitEvent(_event: string, _subject?: Object) {
     //todo eventEmitter
 
     return;

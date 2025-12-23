@@ -25,7 +25,7 @@ export const parkToolController = {
 
     return { ...this, ...this.baseTool };
   },
-  doTool(x: number, y: number, blockMaps: BlockMapSimulation) {
+  doTool(x: number, y: number, _blockMaps: BlockMapSimulation) {
     if (this.baseTool._worldEffects.getTileValue(x, y) !== DIRT) {
       this.result = this.baseTool.TOOLRESULT_NEEDS_BULLDOZE;
       return;

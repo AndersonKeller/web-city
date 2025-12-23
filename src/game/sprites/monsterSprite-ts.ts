@@ -62,7 +62,7 @@ export const monsterSpriteController = {
     EventEmitter(this);
     return { ...this.base, ...this };
   },
-  move(spriteCycle: number, disasterManager: iSpriteManager, blockMaps: BlockMapSimulation) {
+  move(_spriteCycle: number, _disasterManager: iSpriteManager, blockMaps: BlockMapSimulation) {
     if (this.soundCount > 0) this.soundCount--;
     // Frames 1 - 12 are diagonal sprites, 3 for each direction.
     // 1-3 NE, 2-6 SE, etc. 13-16 represent the cardinal directions.
@@ -163,5 +163,5 @@ export const monsterSpriteController = {
     monsterCanvasController.track(this.base.worldX, this.base.worldY, notificationStore().getData.sprite);
     // this._emitEvent(SPRITE_MOVED, { x: this.worldX, y: this.worldY });
   },
-  addEventListener(message: string, subject: Function) {},
+  addEventListener(_message: string, _subject: Function) {},
 };

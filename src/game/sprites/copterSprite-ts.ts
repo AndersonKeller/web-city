@@ -44,8 +44,8 @@ export const copterSpriteController = {
     this.map = map;
     return { ...this.base, ...this };
   },
-  addEventListener(message: string, subject: Function) {},
-  move(spriteCycle: number, disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
+  addEventListener(_message: string, _subject: Function) {},
+  move(spriteCycle: number, _disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
     if (this.soundCount > 0) {
       this.soundCount--;
     }

@@ -152,7 +152,7 @@ export const monsterCanvasController = {
     this._pendingDimensionChange = true;
   },
   paint(isPaused?: boolean) {
-    let i, l, x, y, row, damaged, xBound, yBound, index;
+    let l, y;
     if (!this.ready) throw new Error("Not ready!");
 
     const ctx = this._canvas.getContext("2d");
@@ -193,7 +193,7 @@ export const monsterCanvasController = {
     this._lastCanvasHeight = this.canvasHeight;
   },
   _paintTiles(ctx: CanvasRenderingContext2D, paintData: number[]) {
-    let x, y, row, index;
+    let x, y, index;
     const lastPaintedTiles = this._lastPaintedTiles;
 
     const width = this._totalTilesInViewX;
@@ -322,8 +322,8 @@ export const monsterCanvasController = {
         this.centreOn(e.x, e.y);
         // this._onMove(e);
       });
-      this._tracking.addEventListener(SPRITE_DYING, (e) => {
-        this._onDie(e);
+      this._tracking.addEventListener(SPRITE_DYING, () => {
+        this._onDie();
       });
     }
     this.centreOn(x, y);
@@ -343,7 +343,7 @@ export const monsterCanvasController = {
       this.centreOn(event.x, event.y);
     }
   },
-  _onDie(event) {
+  _onDie() {
     this._tracking.removeEventListener(SPRITE_MOVED, this._onMove);
     this._tracking.removeEventListener(SPRITE_DYING, this._onDie);
     this._tracking = null;

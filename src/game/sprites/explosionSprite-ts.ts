@@ -44,7 +44,7 @@ export const explosionController = {
     }
     this.map.setTo(x, y, this.tileUtils.randomFire());
   },
-  move(spriteCycle: number, disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
+  move(spriteCycle: number, _disasterManager: iDisasterManager, _blockMaps: BlockMapSimulation) {
     if ((spriteCycle & 1) === 0) {
       if (this.frame === 1) {
         const explosionX = this.base.worldX;
@@ -63,5 +63,5 @@ export const explosionController = {
       this.startFire(this.base.x + 16, this.base.y + 16);
     }
   },
-  addEventListener(message: string, subject: Function) {},
+  addEventListener(_message: string, _subject: Function) {},
 };

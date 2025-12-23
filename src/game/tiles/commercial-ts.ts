@@ -12,7 +12,7 @@ import { zoneUtilsController } from "../utils/zoneUtils-ts";
 export type iCommercial = typeof commercialController;
 export const commercialController = {
   tileUtils: tileUtilsController,
-  getZonePopulation(map: GameMap, x: number, y: number, tileValue: number) {
+  getZonePopulation(_map: GameMap, _x: number, _y: number, tileValue: number) {
     if (tileValue === COMCLR) {
       return 0;
     }
@@ -112,7 +112,7 @@ export const commercialController = {
       }
     }
   },
-  registerHandlers(mapScanner: iMapScanner, repairManager: iRepairManager) {
+  registerHandlers(mapScanner: iMapScanner, _repairManager: iRepairManager) {
     this.tileUtils = tileUtilsController;
     mapScanner.addAction(this.tileUtils.isCommercialZone, this.commercialFound.bind(this));
   },

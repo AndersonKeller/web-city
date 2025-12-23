@@ -2,7 +2,7 @@ import type { GameMap } from "../map/gameMap-ts.ts";
 import type { iMapScanner } from "../map/mapScanner-ts.ts";
 import { Random } from "../utils/random.ts";
 import type { iRepairManager } from "../manager/repairManager-ts.ts";
-import type { iSimulation } from "../simulation-ts.ts";
+import type { iSimulation } from "./simulation-ts.ts";
 import { SPRITE_SHIP } from "../utils/spriteConstants.ts";
 import { ANIMBIT, BURNBIT, CONDBIT } from "../tiles/tileFlags.ts";
 import { tileUtilsController } from "../tiles/tileUtils-ts.ts";

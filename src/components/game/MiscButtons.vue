@@ -19,14 +19,7 @@ const evalRequest = () => {
 const disaster = () => {
   inputStatusController.disasterHandler();
 };
-const speed = () => {
-  inputStatusController.speedChangeHandler(speedValue.value);
-  if (speedValue.value === "Pause") {
-    speedValue.value = "Play";
-  } else {
-    speedValue.value = "Pause";
-  }
-};
+
 const screenShot = () => {
   inputStatusController.screenshotHandler();
 };

@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import { monsterStore } from "../../stores/monster.store";
-import { gameCanvasController } from "../../game/gameCanvas-ts";
-import { simulationController } from "../../game/simulation/simulation-ts";
+
 import { monsterCanvasController } from "../../game/canvas/monsterCanvas";
-import { notificationStore } from "../../stores/notification.store";
+
 const canvas = ref(null as typeof monsterCanvasController);
 watch(
   () => monsterStore().getOpenTv,

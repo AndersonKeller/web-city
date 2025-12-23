@@ -97,7 +97,7 @@ export const boatSpriteController = {
     }
     return false;
   },
-  move(spriteCycle: number, disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
+  move(_spriteCycle: number, _disasterManager: iDisasterManager, blockMaps: BlockMapSimulation) {
     var tile = TileValues.RIVER;
     // this.explodeSprite();
     var frame, xx, yy;
@@ -129,7 +129,6 @@ export const boatSpriteController = {
       // Choose a random starting direction to search from
       // 0 = N, 1 = NE, ... 7 = NW
       var startDir = Random.getRandom16() & 7;
-      let dirinitial = startDir;
       for (var dir = startDir; dir < startDir + 8; dir++) {
         frame = (dir & 7) + 1;
         if (frame === this.dir) {
@@ -196,7 +195,7 @@ export const boatSpriteController = {
       }
     }
   },
-  addEventListener(message: string, subject: Function) {},
+  addEventListener(_message: string, _subject: Function) {},
   spriteNotInBounds(x: number, y: number) {
     return x < 0 || y < 0 || x >= this.map.width || y >= this.map.height;
   },

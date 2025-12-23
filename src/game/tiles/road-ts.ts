@@ -169,7 +169,7 @@ export const roadController = {
     }
     map.setTo(x, y, new Tile(newValue, newFlags));
   },
-  registerHandlers(mapScanner: iMapScanner, repairManager: iRepairManager) {
+  registerHandlers(mapScanner: iMapScanner, _repairManager: iRepairManager) {
     const tileUtils = tileUtilsController;
     mapScanner.addAction(tileUtils.isRoad, this.roadFound.bind(this));
   },

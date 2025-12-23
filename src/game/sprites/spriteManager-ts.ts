@@ -1,7 +1,7 @@
 import type { iBaseSprite } from "./baseSprite-ts.ts";
 import { EventEmitter } from "../utils/eventEmitter-ts.ts";
 import type { GameMap } from "../map/gameMap-ts.ts";
-import type { BlockMapSimulation, iSimulation } from "../simulation/simulation-ts.ts";
+
 import { spriteUtilsController } from "./spriteUtils-ts";
 import * as SpriteConstants from "../utils/spriteConstants.ts";
 import * as Messages from "../utils/messages.ts";
@@ -18,15 +18,9 @@ import { boatSpriteController } from "./boatSprite-ts.ts";
 import { copterSpriteController } from "./copterSprite-ts.ts";
 import { tornadoSpriteController } from "./tornadoSprite-ts.ts";
 import { explosionController } from "./explosionSprite-ts.ts";
-import { monsterStore } from "../../stores/monster.store.ts";
+
 import { monsterSpriteController } from "./monsterSprite-ts.ts";
 
-import type { iBudget } from "../simulation/budget-ts.ts";
-import type { iDisasterManager } from "../manager/disasterManager-ts.ts";
-import type { iRepairManager } from "../manager/repairManager-ts.ts";
-import type { iPowerManager } from "../manager/powerManager-ts.ts";
-import type { iTraffic } from "../simulation/traffic-ts.ts";
-import type { iValves } from "../simulation/valves-ts.ts";
 import { notificationStore } from "../../stores/notification.store.ts";
 
 export interface iSprite extends iBaseSprite {}
@@ -277,7 +271,7 @@ export const spriteManagerController = {
       return sprite.frame !== 0;
     });
   },
-  _emitEvent(event, subject) {
+  _emitEvent(_event, _subject) {
     //TODO EMITEVENTER
     return;
   },

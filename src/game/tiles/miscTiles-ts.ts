@@ -51,15 +51,15 @@ export const miscTilesController = {
       map.setTo(x, y, tileUtilsController.randomRubble());
     }
   },
-  radiationFound(map: GameMap, x: number, y: number, simData: iSimulation) {
+  radiationFound(map: GameMap, x: number, y: number, _simData: iSimulation) {
     if (Random.getChance(4095)) {
       map.setTile(x, y, DIRT, 0);
     }
   },
-  floodFound(map: GameMap, x: number, y: number, simData: iSimulation) {
+  floodFound(_map: GameMap, x: number, y: number, simData: iSimulation) {
     simData.disasterManager.doFlood(x, y, simData.blockMaps);
   },
-  registerHandlers(mapScanner: iMapScanner, repairManager: iRepairManager) {
+  registerHandlers(mapScanner: iMapScanner, _repairManager: iRepairManager) {
     const tileUtils = tileUtilsController;
     mapScanner.addAction(tileUtils.isFire, this.fireFound.bind(this));
     mapScanner.addAction(RADTILE, this.radiationFound.bind(this));

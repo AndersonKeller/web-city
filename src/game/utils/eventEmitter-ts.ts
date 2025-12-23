@@ -27,7 +27,7 @@ export function EventEmitter(obj) {
 
     for (var i = 0, l = listeners.length; i < l; i++) listeners[i](value);
   };
-  const addProps = (obj: any, message: string) => {
+  const addProps = (obj: any, _message: string) => {
     obj.addEventListener = addListener;
     obj.removeEventListener = removeListener;
     obj._emitEvent = emitEvent;

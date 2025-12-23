@@ -16,7 +16,7 @@ export const industrialController = {
   animated: [true, false, true, true, false, false, true, true],
   xDelta: [-1, 0, 1, 0, 0, 0, 0, 1],
   yDelta: [-1, 0, -1, -1, 0, 0, -1, -1],
-  getZonePopulation(map: GameMap, x: number, y: number, tileValue: number): number {
+  getZonePopulation(_map: GameMap, _x: number, _y: number, tileValue: number): number {
     if (tileValue === INDCLR) {
       return 0;
     }
@@ -117,7 +117,7 @@ export const industrialController = {
       }
     }
   },
-  registerHandlers(mapScanner: iMapScanner, repairmanager: iRepairManager) {
+  registerHandlers(mapScanner: iMapScanner, _repairmanager: iRepairManager) {
     const tileUtil = tileUtilsController;
     mapScanner.addAction(tileUtil.isIndustrialZone, this.industrialFound.bind(this));
   },

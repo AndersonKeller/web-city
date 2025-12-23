@@ -15,7 +15,7 @@ import { simulationController, type iSimulation } from "./simulation/simulation-
 import { storageController } from "./utils/storage-ts.ts";
 import { textUtils } from "./utils/text-ts.ts";
 import type { iTyleSet } from "./tiles/tileSet-ts.ts";
-const touchListener = function (e) {
+const touchListener = function () {
   //window.removeEventListener("touchstart", this.touchListener, false);
 
   modalStore().setOpenTouchWarn(true);

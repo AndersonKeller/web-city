@@ -1,6 +1,5 @@
 import { defineStore } from "pinia";
-import type { Tile } from "../game/tiles/tile";
-import type { iSprite } from "../game/sprites/spriteManager-ts";
+
 import type { iAnimationManager } from "../game/manager/animationManager-ts";
 import type { GameMap } from "../game/map/gameMap-ts";
 import type { iTyleSet } from "../game/tiles/tileSet-ts";

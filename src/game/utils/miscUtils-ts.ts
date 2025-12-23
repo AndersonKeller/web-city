@@ -24,7 +24,7 @@ export const miscUtilsController = {
   reflectEvent(message, value): void {
     this._emitEvent(message, value);
   },
-  _emitEvent(message, value): void {
+  _emitEvent(_message, _value): void {
     EventEmitter(this);
     return;
   },

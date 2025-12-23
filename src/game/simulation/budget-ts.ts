@@ -230,7 +230,7 @@ export const budgetController = {
   shouldDegradeRoad() {
     return this.roadEffect < Math.floor((15 * +this.MAX_ROAD_EFFECT.value) / 16);
   },
-  _emitEvent(event, subject?: Object) {
+  _emitEvent(_event, _subject?: Object) {
     //for handling EventEmitter()
 
     return;

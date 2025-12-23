@@ -56,7 +56,7 @@ export const trainSpriteController = {
 
     return { ...this.base, ...this };
   },
-  move(spriteCycle: number, disasterManager: iSpriteManager, blockMaps: BlockMapSimulation) {
+  move(spriteCycle: number, _disasterManager: iSpriteManager, _blockMaps: BlockMapSimulation) {
     // Trains can only move in the 4 cardinal directions
     // Over the course of 4 frames, we move through a tile, so
     // ever fourth frame, we try to find a direction to move in
@@ -124,5 +124,5 @@ export const trainSpriteController = {
       y: this.base.worldY,
     });
   },
-  addEventListener(message: string, subject: Function) {},
+  addEventListener(_message: string, _subject: Function) {},
 };

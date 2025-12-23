@@ -125,7 +125,7 @@ export const powerManagerController = {
     repairManager.addAction(POWERPLANT, 7, 4);
     repairManager.addAction(NUCLEAR, 7, 4);
   },
-  _emitEvent(event: string, subject?: Object) {
+  _emitEvent(_event: string, _subject?: Object) {
     //todo emitEveent
     return;
   },

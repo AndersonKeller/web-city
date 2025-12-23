@@ -307,7 +307,7 @@ export const evaluationController = {
       this[this.saveProps[i]] = saveData[this.saveProps[i]];
     }
   },
-  _emitEvent(event: string, subject: Object) {
+  _emitEvent(_event: string, _subject: Object) {
     //TODO EVENTEMITER
     return;
   },

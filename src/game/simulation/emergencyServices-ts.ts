@@ -2,8 +2,9 @@ import type { GameMap } from "../map/gameMap-ts";
 import type { iMapScanner } from "../map/mapScanner-ts";
 import { Position } from "../utils/position";
 import type { iRepairManager } from "../manager/repairManager-ts";
-import type { iSimulation } from "../simulation-ts";
+
 import { FIRESTATION, POLICESTATION } from "../tiles/tileValues";
+import type { iSimulation } from "./simulation-ts";
 
 export const emergencyServicesController = {
   handleService(censusStat: string, budgetEffect: string, blockMap: string) {
@@ -26,7 +27,7 @@ export const emergencyServicesController = {
     };
   },
 
-  registerHandlers(mapScanner: iMapScanner, repairManager: iRepairManager) {
+  registerHandlers(mapScanner: iMapScanner, _repairManager: iRepairManager) {
     mapScanner.addAction(POLICESTATION, policeStationFound);
     mapScanner.addAction(FIRESTATION, fireStationFound);
   },

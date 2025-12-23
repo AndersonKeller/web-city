@@ -9,7 +9,7 @@ import type { BlockMapSimulation } from "../simulation/simulation-ts.ts";
 import { QUERY_WINDOW_NEEDED } from "../utils/messages.ts";
 export const queryToolController = {
   baseTool: null as iBaseToolController,
-  addEventListener: (event: string, listener: Function) => {},
+  addEventListener: (_event: string, _listener: Function) => {},
   result: null,
   baseTiles: [
     TileValues.DIRT,
@@ -178,7 +178,7 @@ export const queryToolController = {
 
     this.result = this.baseTool.TOOLRESULT_OK;
   },
-  _emitEvent(event: string, subject?: Object) {
+  _emitEvent(_event: string, _subject?: Object) {
     //TODO EVENTEMITTER
     return;
   },

@@ -231,7 +231,7 @@ export const disasterManagerController = {
     notificationStore().setData({ x, y, sprite });
     notificationStore().setNotification(Messages.CRASHES[1], "bad");
   },
-  _emitEvent(event: string, subject: Object) {
+  _emitEvent(_event: string, _subject: Object) {
     //decorator for EventEmitter
     return;
   },

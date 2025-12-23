@@ -1,7 +1,7 @@
 
 import { budgetController, type iBudget } from "./budget-ts";
 import { censusController, type iCensus } from "./census-ts";
-import { disasterManagerController, type iDisasterManager } from "../manager/disasterManager-ts.ts";
+import { disasterManagerController } from "../manager/disasterManager-ts.ts";
 import { evaluationController, type iEvaluation } from "./evaluation-ts";
 import type { GameMap } from "../map/gameMap-ts.ts";
 import { mapScannerController } from "../map/mapScanner-ts.ts";
@@ -42,9 +42,7 @@ interface ValvesWhitEvent extends iValves {
 export interface SpritesWhitEvent extends iSpriteManager {
   addEventListener: (event: string, listeners: () => void) => void;
 }
-interface DisasterManagerWhitEvent extends iDisasterManager {
-  addEventListener: (event: string, listeners: () => void) => void;
-}
+
 interface iSumilationTraffic extends iTraffic {}
 export interface BlockMapSimulation {
   cityCentreDistScoreMap: BlockMap;
@@ -91,7 +89,7 @@ interface iTrafficSimulation extends iTraffic {}
 export type iSimulation = typeof simulationController;
 export const simulationController = {
   _map: null as GameMap,
-  addEventListener: (event: string, subject?: Function) => {},
+  addEventListener: (_event: string, _subject?: Function) => {},
   LEVEL_EASY: 0,
   LEVEL_MED: 1,
   LEVEL_HARD: 2,
@@ -332,7 +330,7 @@ export const simulationController = {
     this.budget.save(saveData);
     this._census.save(saveData);
   },
-  _emitEvent(event: string, subject: Object) {
+  _emitEvent(_event: string, _subject: Object) {
     //decorator for EventEmitter
     return;
   },

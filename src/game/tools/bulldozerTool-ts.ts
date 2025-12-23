@@ -141,7 +141,7 @@ export const bulldozerToolConstroller = {
       this.result = toolResult;
     }
   },
-  _emitEvent(event: string, subject?: Object) {
+  _emitEvent(_event: string, _subject?: Object) {
     //EVENT EMMITER
     return;
   },

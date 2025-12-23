@@ -152,7 +152,7 @@ export const gameCanvasController = {
     this._originY = originY;
   },
   paint(mouse?: any, sprites?: HTMLImageElement[], isPaused?: boolean) {
-    let i, l, x, y, row, damaged, xBound, yBound, index;
+    let i, l, x, y, damaged, xBound, yBound, index;
     if (!this.ready) throw new Error("Not ready!");
 
     const ctx = this._canvas.getContext("2d");
@@ -305,7 +305,7 @@ export const gameCanvasController = {
     return exec(mouse);
   },
   _paintTiles(ctx: CanvasRenderingContext2D, paintData: number[]) {
-    let x, y, row, index;
+    let x, y, index;
     const lastPaintedTiles = this._lastPaintedTiles;
 
     const width = this._totalTilesInViewX;

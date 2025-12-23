@@ -23,7 +23,7 @@ export const storageController = {
     switch (savedGame.version.value) {
       case 1:
         savedGame.everClicked = false;
-
+        break;
       /* falls through */
       case 2:
         savedGame.pollutionMaxX = Math.floor(savedGame.width / 2);
